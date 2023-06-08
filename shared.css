@@ -25,6 +25,19 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
+    display: inline-block;
+    height:22px;
+    /* height: 22px; this will not work because setting 
+     the anchor tag  in this case parent doesnot effect
+     height and width of the image. */
+
+}
+.main-header__brand img{
+    /* height:22px; */
+    height: 100%;
+    /* here  using percentage will not work cause anchor
+    is an inline element. If we want to  use percentage 
+    we have to make the anchor tag inline-block*/
 }
 
 .main-nav {
