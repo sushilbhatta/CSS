@@ -1,17 +1,56 @@
-
-
 #product-overview {
+    /* linear gradient 
+    /* first argument is position and then colors 
+    /* background: linear-gradient(to top right, red, blue);   */
+    /* background: linear-gradient(180deg, red, blue); top to bottom */
+    /* background: linear-gradient(0deg, red, blue);bottom to top */
+    /* background: linear-gradient(30deg, red, blue); */
+    /* background: linear-gradient(180deg, red, transparent); */
+    /* here each gradient color  takes the  30% of the space  by default*/
+    /* background: linear-gradient(180deg, red 70%, blue 80%, rgba(0, 0, 0, 0.5)); */
+    /* here the red color takes 70% red space then transition to blue and blue then takes 80% of the transiiton space .but if we put 
+     less then 70 % of blue then it will not have space for transition.  */
+    /* background: linear-gradient(180deg, red 70%, blue 60%, rgba(0, 0, 0, 0.5)); */
 
-    background: url("./images/freedom.jpg") left 10% bottom 75%/cover no-repeat border-box;
+    /* radial-gradient 
+    default is ellipse
+    first color specified is at the center of the ellipse and other color are outside  in the respespective specified manner.
+    */
+    /* background-image: radial-gradient(red, blue); */
+    /* only alternative of the ellipse is circle which can be specified as : */
+    /* background-image: radial-gradient(circle at top left, red, blue, green); */
+    /* we can also specify the position using {at [perefered position]} 
+        we can also use the manual value to indicate the position to specify the position*/
+    /* background-image: radial-gradient(circle at 10% 20%, red, blue, green); */
+    /* NOTE:first value is x axis and secound value is y-axis */
+    /* to specify the size of the circle */
+    /* background-image: radial-gradient(circle 20px at 20% 30%, red, blue, green); */
+    /* here  20px is the total size of the circle expect the outermost color ie 20 px is the diameter of the circle formed by combining the red and blue color. */
+    /*      In case of the ellipse the one value does not work ,we have to specify the two value
+        in which the first value is width and second value is the height */
+    /* background-image: radial-gradient(ellipse 30px 40px at 20% 30%, red, blue, green); */
+    /* apart form the manual vlaue there are some keyword */
+    /* background-image: radial-gradient(ellipse farthest-side at 20% 30%, red, blue, green); */
+    /*                  second last color touches the farest side  */
+    /* background-image: radial-gradient(ellipse closest-side at 20% 30%, red, blue, green); */
+    /* second last color touches the closest side   */
+    background-image: radial-gradient(ellipse farthest-corner at 20% 30%, red, blue, green);
+    /* second last color touches the farest corner   */
+    /* background-image: radial-gradient(ellipse closest-side at 20% 30%, red, blue, green); */
+    /* second last color touches the closest corner   */
+
+
+    /* background properties */
     /* background-size: cover; 
     /* background-repeat:no-repeat;
     /* background-position:left 10% top 20%;  */
     /* background-origin:border-box; */
     /* background-clip: border-box; */
     /* border:5px dashed red; */
+    background: linear-gradient(rgba(80, 68, 18, 0.6) 10%, transparent), url("./images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box, #ff1b68;
     width: 100%;
     height: 528px;
-    padding: 10px;  
+    padding: 10px;
     position: relative;
 }
 
@@ -25,7 +64,7 @@
     font-family: 'Anton', sans-serif;
     position: absolute;
     bottom: 5%;
-    left:3%
+    left: 3%
 }
 
 .plan__list {
@@ -115,6 +154,7 @@
     border: 2px solid #424242;
     border-radius: 50%;
     margin: auto;
+    padding: 20px;
 }
 
 .key-feature__description {
@@ -127,4 +167,3 @@
 /* h1 {
     font-family: sans-serif;
 } */
-
