@@ -71,6 +71,7 @@ body {
 /*   endl */
 
 .main-header__brand {
+    vertical-align: middle;
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
@@ -94,7 +95,7 @@ body {
 .main-nav {
     display: inline-block;
     text-align: right;
-    width: calc(100% - 74px);
+    width: calc(100% - 134px);
     vertical-align: middle;
 }
 
@@ -220,3 +221,11 @@ body {
 .mobile-nav__item a {
     font-size: 1.5rem;
 }
+
+.open {
+    display: block !important;
+}
+
+
+
+/*TIP:if the child of parent with z-index have the z index set then it looks at each other to stack the element .ie child now have their own stacking context apart form the main html page's stacking context. */

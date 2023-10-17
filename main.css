@@ -47,7 +47,7 @@
     /* background-origin:border-box; */
     /* background-clip: border-box; */
     /* border:5px dashed red; */
-    background: linear-gradient(rgba(80, 68, 18, 0.6) 10%, transparent), url("./images/freedom.jpg") left 10% bottom 60%/cover no-repeat border-box, #ff1b68;
+    background: linear-gradient(rgba(80, 68, 18, 0.6) 10%, transparent), url("./images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box, #ff1b68;
     width: 100vw;
     height: 80vh;
     margin-top: 2.75rem;
