@@ -8,6 +8,11 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    min-height: calc(100vh - 3.5rem - 8rem);
+    margin-top: 3.5rem;
+}
+
 /* html {
     height: 100%;
 
@@ -47,6 +52,7 @@ body {
 
 /* hamburger menu icon */
 .toggle-button {
+    display: none;
     width: 3rem;
     background: transparent;
     border: none;
@@ -75,9 +81,9 @@ body {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     display: inline-block;
-    height: 1.5rem;
+    height: 2.5rem;
     /* height: 22px; this will not work because setting 
      the anchor tag  in this case parent doesnot effect
      height and width of the image. */
