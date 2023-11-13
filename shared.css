@@ -101,7 +101,7 @@ main {
 .main-nav {
     display: inline-block;
     text-align: right;
-    width: calc(100% - 134px);
+    width: calc(100% - 100px);
     vertical-align: middle;
 }
 
@@ -192,6 +192,13 @@ main {
 .button:active {
     background: white;
     color: #0e4f1f;
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+    background: #ccc;
+    color: #a1a1a1;
+    border-color: #a1a1a1;
 }
 
 .button:focus {
