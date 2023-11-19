@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Bold.ttf");
+    font-weight: 700;
+
+}
+
+
+
 main {
     padding-top: 2rem;
 }
@@ -52,9 +66,22 @@ main {
 .package__info {
     padding: 1rem;
     border: 1px solid #0e4f1f;
-    font-size: 1.2rem;
     color: #0e4f1f;
     background: white;
+    font-size: 1.2rem;
+    /* font-family: "AnonymousPro", sans-serif;
+    font-weight: 700; 
+    font-size: 1.2rem;
+    line-height: 2; 
+    always refers to the fontsize multiply by the line height.  
+    text-shadow: 2px 2px 7px rgb(185, 180, 180); 
+    here first is x axis 2nd is y axis 3rd is the blur value and last is the color of shadow.
+    ###########font shorthand################
+    font: italic small-caps 700 1.2rem/2 "AnonymousPro", sans-serif; 
+    font-style font-varient font-weight font-size/line-height font-family
+    NOTE:order of the properties is very important. */
+
+
 }
 
 .clearfix {
