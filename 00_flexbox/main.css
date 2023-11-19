@@ -12,13 +12,28 @@ body {
     background: #b3b3b3;
     padding: 5px;
     margin: 0;
-  }
-  
+}
+
 .flex-container {
     background: white;
     padding: 10px;
     border: 5px solid black;
-  }
+    display: flex;
+    /* with display flex the direction in which the object appear by default is the row.
+    and height of the item is the maximum height that the an item have. and width is determined by flex-wrap property
+    if the flex-wrap is  nowrap(default) then it will not wrap the items inside the  container
+    insted  it will reduce the size of the items upto the point the content inside the item  have extra space.
+    When the item's content is fitted with the width of the item then it override the flexbpx.*/
+    flex-direction: row;
+    /*column|column-reverse|row-reverse*/
+    flex-wrap: wrap;
+    /*nowrap|wrap-reverse*/
+    /* While using the flex wrap property ,we can observe the 
+    two things :
+    1.when we try to minmize the width of the last flex item (item 6)
+    beyond the 350px, It doesnot do that instead the item 6 move to next line.
+    2.when the item is moved to the next line the height of that item is same as before but it only takes the height that its content requires. */
+}
 
 .item-1 {
     background: #ff7300;
