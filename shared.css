@@ -47,6 +47,10 @@ main {
     background: #2ddf5c;
     padding: 0.5rem 1rem;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    /* align the navbar and the logo center across cross axis ie vertically */
+    justify-content: space-between;
 }
 
 .main-header>div {
@@ -56,7 +60,6 @@ main {
 
 /* hamburger menu icon */
 .toggle-button {
-    display: none;
     width: 3rem;
     background: transparent;
     border: none;
@@ -81,13 +84,13 @@ main {
 /*   endl */
 
 .main-header__brand {
-    vertical-align: middle;
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
+    /* vertical-align: middle; */
     /* font-size: 1.5rem; */
-    display: inline-block;
-    height: 2.5rem;
+    /* display: inline-block; */
+    /* height: 2.5rem; */
     /* height: 22px; this will not work because setting 
      the anchor tag  in this case parent doesnot effect
      height and width of the image. */
@@ -95,24 +98,23 @@ main {
 }
 
 .main-header__brand img {
+    vertical-align: middle;
+    height: 2.5rem;
     /* height:22px; */
-    height: 100%;
     /* here  using percentage will not work cause anchor
     is an inline element. If we want to  use percentage 
     we have to make the anchor tag inline-block*/
 }
 
 .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 100px);
-    vertical-align: middle;
+    display: none;
 }
 
 .main-nav__items {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
 }
 
 .main-nav__item {
@@ -153,6 +155,20 @@ main {
     border: none;
 }
 
+@media(min-width:43rem) {
+    .toggle-button {
+        display: none;
+    }
+
+    .main-nav {
+        /* display: inline-block;
+        text-align: right;
+        width: calc(100% - 100px);
+        vertical-align: middle; */
+        display: flex;
+    }
+}
+
 .main-footer {
     background: black;
     padding: 2rem;
@@ -163,12 +179,13 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+    margin: 0.5rem 0;
 }
 
 .main-footer__link a {
@@ -180,6 +197,19 @@ main {
 .main-footer__link a:active {
     color: #ccc;
 }
+
+@media(min-width:43rem) {
+    .main-footer__link {
+        margin: 0 1rem;
+    }
+
+    .main-footer__links {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
 
 .button {
     background: #0e4f1f;
@@ -223,12 +253,15 @@ main {
 }
 
 .mobile-nav__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     height: 100%;
     list-style: none;
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 0;
-    text-align: center;
 }
 
 .mobile-nav__item {
