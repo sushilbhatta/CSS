@@ -76,8 +76,11 @@
 
 @media(min-width:43rem) {
   .testimonial {
-    margin: 3rem 0;
+    margin: 3rem auto;
     max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   /* .testimonial__list {
@@ -86,15 +89,13 @@
   } */
 
   .testimonial__image-container {
-    display: inline-block;
-    vertical-align: middle;
     width: 66%;
 
   }
 
   .testimonial__info {
-    display: inline-block;
+
     width: 30%;
-    vertical-align: middle;
+
   }
 }
