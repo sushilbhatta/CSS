@@ -21,7 +21,7 @@ body {
     grid-template-areas: "header"
         "main"
         "footer"
-
+        /* first row header of size 3.5rem 2nd row main of size auto and 3rd is footer of size minimum of 6rem */
 }
 
 main {
@@ -151,6 +151,16 @@ main {
     border-bottom: 5px solid white;
 }
 
+.main-nav__item--cta {
+    animation: wiggle 400ms 3s 8 ease-out none;
+    /*   keyframe name time   delay  iteration   
+    alternate ==> after one iteration it snaps back to the initial state and so on*/
+    /* forwards==> specify to keep the final state of animation after the animation is fininshed. */
+    /* backwards==> specify to keep the starting state of animation before the animation . */
+
+    /* both  spicified to keep the start of animation and final state */
+}
+
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
     color: white;
@@ -261,7 +271,7 @@ main {
     z-index: 101;
     top: 0;
     left: 0;
-    background: white;
+    background: rgb(235, 228, 228);
     width: 80%;
     height: 100vh;
 }
@@ -288,8 +298,24 @@ main {
 
 .open {
     display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0deg) !important;
 }
 
 
+@keyframes wiggle {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    50% {
+
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
 
 /*TIP:if the child of parent with z-index have the z index set then it looks at each other to stack the element .ie child now have their own stacking context apart form the main html page's stacking context. */
